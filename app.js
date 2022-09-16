@@ -27,23 +27,23 @@ app.get("/", function(req, res) {
 
 });
 
-app.get("/about", function(req, res) {
+app.get("https://daily-journal12.herokuapp.com/about", function(req, res) {
   res.render("About", {
     AboutContent: aboutContent
   });
 });
 
-app.get("/contact", function(req, res) {
+app.get("https://daily-journal12.herokuapp.com/contact", function(req, res) {
   res.render("Contact", {
     contactContent: contactContent
   });
 });
 
-app.get("/compose", function(req, res) {
+app.get("https://daily-journal12.herokuapp.com/compose", function(req, res) {
   res.render("Compose");
 });
 
-app.post("/compose", function(req, res) {
+app.post("https://daily-journal12.herokuapp.com/compose", function(req, res) {
   const post = {
     title: req.body.postTitle,
     content: req.body.postBody
